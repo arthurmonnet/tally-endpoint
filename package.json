@@ -1,0 +1,43 @@
+{
+  "name": "tally-endpoint",
+  "version": "1.0.0",
+  "description": "Receives daily developer stats from the Tally macOS app and serves them as JSON via Vercel KV",
+  "license": "MIT",
+  "author": "Arthur Monnet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthurmonnet/tally-endpoint"
+  },
+  "bugs": "https://github.com/arthurmonnet/tally-endpoint/issues",
+  "homepage": "https://github.com/arthurmonnet/tally-endpoint#readme",
+  "keywords": [
+    "tally",
+    "developer-stats",
+    "vercel",
+    "kv-store",
+    "next.js"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vercel/kv": "^2.0.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.14",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.0"
+  }
+}
