@@ -83,7 +83,7 @@ export async function GET(request: NextRequest) {
     return json({ ok: false, error: "Unauthorized" }, 401);
   }
 
-  const cache = { "Cache-Control": "s-maxage=300, stale-while-revalidate=3600" };
+  const cache = { "Cache-Control": "no-store" };
   const date = request.nextUrl.searchParams.get("date");
 
   if (date && !DATE_RE.test(date)) {

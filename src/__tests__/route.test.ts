@@ -238,6 +238,6 @@ describe("GET /api/tally", () => {
 
     const req = makeRequest("GET", { token: VALID_TOKEN });
     const res = await GET(req);
-    expect(res.headers.get("Cache-Control")).toContain("s-maxage");
+    expect(res.headers.get("Cache-Control")).toBe("no-store");
   });
 });
